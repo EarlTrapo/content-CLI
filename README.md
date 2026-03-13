@@ -47,6 +47,8 @@ ANTHROPIC_API_KEY=your_key_here
 ```bash
 node engine.js "your raw idea here"
 ```
+## Demo
+![demo](assets/demo.png)
 
 **Flags:**
 
