@@ -104,3 +104,7 @@ npx hyperframes render                # render to renders/*.mp4
 The HyperFrames agent skills live in `.claude/skills/`, so in Claude Code you can just ask, e.g. *"Using /hyperframes, add captions to videos/raw/talk.mp4"*. Refresh them with `npx hyperframes skills update`.
 
 In Claude Code on the web, `.claude/hooks/session-start.sh` installs npm packages, FFmpeg and the render browser automatically.
+
+### Trimming a raw recording to its script
+
+Put the raw video and its script in `videos/<name>/` and ask Claude to use `/script-guided-cut`. It transcribes the video, matches the transcription against the script, keeps the best take of each line, and cuts dead air, false starts and retakes. It shows you the cut plan before rendering. The full step-by-step guide is in `.claude/skills/script-guided-cut/SKILL.md`.
