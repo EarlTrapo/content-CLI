@@ -82,3 +82,25 @@ Prospecting angle:
 ## Why I built this
 
 Content creation and prospecting are the same cognitive act — you're identifying a problem and framing it clearly. This tool runs both in parallel so neither gets skipped.
+
+---
+
+## Video editing with HyperFrames
+
+[HyperFrames](https://github.com/heygen-com/hyperframes) is installed as a dev dependency for turning HTML, CSS, media and animations into MP4 videos. Requires Node.js 22+ and FFmpeg.
+
+```bash
+npm install
+npx hyperframes browser ensure        # one-time: downloads headless Chrome for rendering
+npm run video:doctor                  # check FFmpeg, Chrome, etc.
+
+cd videos
+npx hyperframes init my-video         # scaffold a project (add --video clip.mp4 to start from footage)
+cd my-video
+npx hyperframes preview               # live preview in the browser
+npx hyperframes render                # render to renders/*.mp4
+```
+
+The HyperFrames agent skills live in `.claude/skills/`, so in Claude Code you can just ask, e.g. *"Using /hyperframes, add captions to videos/raw/talk.mp4"*. Refresh them with `npx hyperframes skills update`.
+
+In Claude Code on the web, `.claude/hooks/session-start.sh` installs npm packages, FFmpeg and the render browser automatically.

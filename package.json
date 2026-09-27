@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "video:new": "hyperframes init",
+    "video:doctor": "hyperframes doctor"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +16,8 @@
     "@anthropic-ai/sdk": "^0.78.0",
     "chalk": "^4.1.2",
     "dotenv": "^17.3.1"
+  },
+  "devDependencies": {
+    "hyperframes": "^0.8.79"
   }
 }
