@@ -1,0 +1,32 @@
+{
+  "_note": "Your quality bar. Code enforces 'technical'; the AI reviewer enforces 'visual'. Edit freely.",
+  "technical": {
+    "minWidth": 720,
+    "minHeight": 1280,
+    "aspect": "9:16",
+    "aspectTolerance": 0.02,
+    "minDurationSec": 3,
+    "maxDurationSec": 90,
+    "minFps": 23.9,
+    "requireAudio": true,
+    "loudnessLufs": [-16, -12],
+    "maxTruePeakDb": -1,
+    "maxBlackSec": 0.3,
+    "maxFrozenSec": 1.0,
+    "hookWindowSec": 3
+  },
+  "visual": {
+    "minScore": {
+      "artifacts": 7,
+      "consistency": 7,
+      "prompt_match": 7,
+      "hook": 6,
+      "composition": 6
+    }
+  },
+  "frames": {
+    "hookFrames": 3,
+    "bodyFrames": 7,
+    "width": 768
+  }
+}
